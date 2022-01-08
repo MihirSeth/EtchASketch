@@ -29,8 +29,6 @@ function buttonFontColorChange(){
     rgbMode.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
 }
 
-
-
 resetButton.addEventListener('click', reset);
 rgbMode.addEventListener('click', rainbowMode);
 colorMode.addEventListener('click', coloredMode);
@@ -62,7 +60,6 @@ function pickedColor(colorPick){
     colorPicked = colorPick;
     // console.log(colorPicker.style.backgroundColor)
     colorPicker.style.backgroundColor = `${colorPicked}`;
-
 
     currentMode = 'color';
     currentColor = colorPicked;
@@ -161,11 +158,8 @@ function updateSizeValue (size){
 
 slider.onchange = function() {
     output.innerHTML = `${slider.value} x ${slider.value}`;
-
     currentSize = slider.value;
-
     gridContainer.innerHTML = ''
-
     gridMake()
 }
 
