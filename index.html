@@ -3,15 +3,37 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href = "https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:100,200,300,400,500,700,800,900" rel = "stylesheet" />
+    <link href = "https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:100,200,300,400,500,700,800,900" rel = "stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
 
 
     
 </head>
 <body>
     <h1>Etch-a-sketch</h1>
-    <div id = 'gridContainer' class='gridContainer'>
-        <div id='gridItem' class='gridItem'></div>
+
+    <div class='main'> 
+        <div class='column'>
+            <div class='colorPickerContainer'><input id="colorPicker" class='colorPicker' type="color" value="black" /></div>
+
+            <div class="buttonContainer"><button id='rgbButton' class='button'>RGB Mode</button></div>
+            <div class="buttonContainer"><button id='colorButton' class='button'>Color Mode</button></div>
+            <!-- <div class="buttonContainer"><button id='greyScale' class='button'>Greyscale</button></div> -->
+            <div class="buttonContainer"><button id='eraserButton' class='button'>Eraser</button></div>
+            <div class="buttonContainer"><button id='resetButton' class='button'>Reset</button></div>
+
+
+            <div class='outputContainer'><p class='selectedMode' id='selectedMode'>Selected Mode: Color Mode </p></div>
+
+
+
+
+            <div class='outputContainer'><p class='gridSize' id='gridSize'>16 x 16 </p></div>
+            <input type="range" min="1" max="100" value="16" class="slider" id="slider">
+
+
+        </div>
+        <div id = 'gridContainer' class='gridContainer'></div>
     </div>
   
 </body>
